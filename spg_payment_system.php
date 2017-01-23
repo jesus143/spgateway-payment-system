@@ -14,23 +14,22 @@ if(!session_id()) {
 
 require_once( ABSPATH . "wp-includes/option.php");
 
-add_action("admin_menu", "spg_p_s_admin_menu");
+add_action("admin_menu", "spg_ps_admin_menu");
 
-function spg_p_s_admin_menu()
+function spg_ps_admin_menu()
 {
 
     add_menu_page('Spgateway Payment System', 'Spgateway Payment System', 'manage_options', "spg-payment-system", 'spg_p_s_admin');
 }
 
-function spg_p_s_header() {
+function spg_ps_header() {
     ?>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <?php
 }
-function spg_p_s_admin () {
+function spg_ps_admin () {
 
     spg_p_s_header();
 
@@ -211,4 +210,16 @@ function spg_p_s_admin () {
     </form>
 
     <?php
+}
+
+
+function spg_ps_checkout()
+{
+
+
+    print "this is the checkout page";
+}
+function spg_ps_thank_you()
+{
+    print "this is the thank you page";
 }
